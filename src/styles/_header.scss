@@ -1,0 +1,55 @@
+@use "variaveis";
+
+.header{ 
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: variaveis.$corDeFundo;
+    transition: background-color .5s ease;
+    z-index: 1;
+
+    &__container {
+        padding: 8px 36px;
+        display: flex;
+        justify-content: center;
+        
+
+        @media (max-width: 768px) {
+            padding: 0px 12px 0px 12px;
+        }
+    }
+
+    &__logo {
+        max-width: 80px;
+        width: 100%;
+        margin: 5px;
+        transition: opacity .5s ease;
+
+        @media (max-width: 768px) {
+            max-width: 64px;
+        }
+    }
+
+    &__links {
+        display: flex;
+
+        &__item {
+            max-width: 150px;
+            margin: 5px;
+            transition: opacity .5s ease;
+            
+        }
+    }
+
+    button {
+        height: 10px;
+        
+        @media (max-width: 768px) {
+            font-size: 13px;
+            padding: 8px 11px;
+            height: 40px;
+            letter-spacing: 0;
+        }
+    }
+}
+

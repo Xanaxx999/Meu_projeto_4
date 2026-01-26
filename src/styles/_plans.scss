@@ -1,0 +1,70 @@
+@use "variaveis";
+
+.plans {
+    padding: 5.6vw;
+
+    .button_buy {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 60px;
+        font-size: 18px;
+        color: variaveis.$corTextoSecundaria;
+        background-color: variaveis.$corDefundoBotaoprimeiro;
+        text-transform: uppercase;
+        border-radius: 4px;
+        cursor: pointer;
+        text-decoration: none;
+        padding: 8px 14px;
+        letter-spacing: 1px;
+        border: 1px solid variaveis.$corDefundoBotaoprimeiro;
+    }
+
+    .button--comprado {
+    background-color: variaveis.$cor_botao_comprado;
+    color: white;
+    border: none;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+
+        @media (max-width: 768px) {
+            display: block;
+        }
+
+        .button {
+            margin-top: 24px;
+        }
+        
+        &__item {
+            max-width: 380px;
+            width: 100%;
+            text-align: center;
+            padding: 60px 44px 44px;
+
+
+            img {
+                height: 83px;
+            }
+
+            strong {
+                display: block;
+                margin-top: 24px;
+            }
+        }
+
+    }
+
+    p {
+        text-align: center;
+    }
+}
+
