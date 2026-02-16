@@ -7,6 +7,13 @@ function html() {
         .pipe(gulp.dest("./dist"));
 }
 
+function scripts() {
+    return gulp.src('./src/scripts/**/*.js')
+        .pipe(gulp.dest('./dist/scripts'));
+}
+
+
+
 function styles() {
     return gulp.src("./src/styles/main.scss")
         .pipe(sass({outputStyle: "compressed"}))
@@ -19,7 +26,7 @@ function images() {
         .pipe(gulp.dest("./dist/images"));
 }
 
-exports.default = gulp.parallel(styles, images, html);
+exports.default = gulp.parallel(styles, images, html, scripts);
 
 exports.watch = function () {
     gulp.watch("./src/styles/**/*.scss", styles);
